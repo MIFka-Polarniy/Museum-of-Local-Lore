@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-num1: #000000;
+  --color-num2: #494949;
+  --color-num3: #4e4e4e;
+  --color-num4: #8d8d8d;
+  --color-num5: #d6d6d6;
+  --color-text: white;
+  --max-weight: 1000px;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+}
+
+.content-root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  max-width: var(--max-weight);
+}
+body {
+  background-color: #1e1e1e;
+  font-family: 'Helvetika', sans-serif;
+  color: #000000;
+}
+
+/*---Конец глобальных стилекей---*/
+/*---header---*/
+.header {
+  display: flex;
+  vertical-align: middle;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.logo {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.logo a {
+  font-size: 40px;
+  color: var(--color-text);
+  font-weight: bold;
+  text-decoration: none;
+}
+.logo a:hover {
+  color: #8a8a8a;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+/*---header lang---*/
+.version {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.lang {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.lang a {
+  display: inline-block;
+  width: 60px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: var(--color-num4);
+}
+
+.active-lang {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.active-lang a {
+  display: inline-block;
+  width: 60px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: var(--color-text);
+}
+
+/*---Mein content---*/
+.main {
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 50px 50px;
+}
+
+.first-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.first-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  opacity: 0.63;
+}
+.img-bg {
+  background-color: black;
+}
+
+.first-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.first-h1 {
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.first-h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--color-num5);
+}
+
+.first-a {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px 50px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+}
+.first-a:hover {
+  background-color: var(--color-num5);
+}
+
+.title-mein {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/*Cards*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 24px;
+}
+
+.card {
+  background: var(--color-num1);
+  display: flex;
+  width: calc(50% - 12px);
+  padding: 25px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.card:hover {
+  background-color: var(--color-num2);
+}
+
+.card-text {
+  flex-grow: 1;
+  font-size: 30px;
+  text-align: right;
+  color: white;
+  max-width: 234px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.card-img {
+  position: relative;
+  width: 60%;
+  max-width: 164px;
+  padding-top: 40%;
+}
+
+.card-img img {
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*---footer---*/
+.footer {
+  display: flex;
+  vertical-align: middle;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+.footer-text {
+  font-size: 40px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.phone-box {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.phone-text {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.phone {
+  font-size: 25px;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /*---header lang---*/
+  .version {
+    padding: 5px;
+  }
+
+  .logo a {
+    font-size: 30px;
+  }
+
+  .lang {
+    font-size: 10px;
+    width: 41px;
+    margin-bottom: 5px;
+    padding: 2px;
+  }
+
+  .active-lang {
+    font-size: 10px;
+    width: 41px;
+    margin-bottom: 5px;
+    padding: 2px;
+  }
+
+  /*---first text---*/
+  .first-h1 {
+    font-size: 20px;
+  }
+
+  .first-h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .first-a {
+    font-size: 12px;
+    padding: 5px 25px;
+  }
+
+  /*---Mein---*/
+
+  /*Cards*/
+  .card-text {
+    font-size: 20px;
+    max-width: 135px;
+  }
+
+  .card-img {
+    max-width: 100px;
+  }
+
+  /*---footer---*/
+  .footer {
+    padding: 10px;
+    padding-left: 20px;
+  }
+
+  .footer-text {
+    font-size: 20px;
+  }
+
+  .phone-text {
+    font-size: 17px;
+    margin-bottom: 0px;
+  }
+
+  .phone {
+    font-size: 14px;
+  }
+}
